@@ -1,4 +1,6 @@
-import {LEVEL, OBJECT_TYPE } from './setup'
+import { LEVEL, OBJECT_TYPE } from './setup'
+//classes
+import GameBoard from './GameBoard';
 
 // DOM Elements
 const gameGrid = document.querySelector('#game')
@@ -8,6 +10,7 @@ const startButton = document.querySelector('#start-button')
 // Game constants - ALL CAPS: THEY CAN'T CHANGE IN THE GAME
 const POWER_PILL_TIME = 10000 //ms
 const GLOBAL_SPEED = 80 // ms
+const gameBoard = GameBoard.createGameBoard(gameGrid, LEVEL)
 
 // initial setup
 let score = 0
@@ -29,5 +32,5 @@ function gameLoop(pacman, ghosts) {
 }
 
 function startGame() {
-    
+
 }
