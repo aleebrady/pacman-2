@@ -20,21 +20,17 @@ let gameWin = false
 let powerPillActive = false
 let powerPillTimer = null
 
-function gameOver(pacman, grid) {
+function gameOver(pacman, grid) {}
 
-}
-
-function checkCollision(pacman, ghosts) {
-
-}
+function checkCollision(pacman, ghosts) {}
 
 function gameLoop(pacman, ghosts) {
-
+    gameBoard.moveCharacter(pacman)
 }
 
 function startGame() {
     gameWin = false
-    powerPillActive = false
+    powerPillActive = false 
     score = 0
 
     startButton.classList.add('hide')
@@ -46,6 +42,8 @@ function startGame() {
     document.addEventListener('keydown', (e) => 
     pacman.handleKeyInput(e, gameBoard.objectExist)
     )
+
+    timer = setInterval(() => gameLoop(pacman), GLOBAL_SPEED)
 }
 
 // initialize game
