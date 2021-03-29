@@ -31,15 +31,15 @@ class GameBoard {
         })
     }
 
-    addObject(position, classes) {
+    addObject(pos, classes) {
         this.grid[pos].classList.add(...classes)
     }
 
-    removeObject(position, classes) {
+    removeObject(pos, classes) {
         this.grid[pos].classList.remove(...classes)
     }
 
-    objectExist(pos, object) {
+    objectExist = (pos, object) => {
         return this.grid[pos].classList.contains(object)
     }
 
